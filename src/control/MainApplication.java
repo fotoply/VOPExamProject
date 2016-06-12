@@ -1,8 +1,4 @@
-package control;/**
- * Created 6/10/16
- *
- * @author Niels Norberg
- */
+package control;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

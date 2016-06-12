@@ -1,10 +1,5 @@
 package ancient_encryption;
 
-/**
- * Created 6/10/16
- *
- * @author Niels Norberg
- */
 public abstract class AbstractCipher implements CipherInterface {
 
     @Override

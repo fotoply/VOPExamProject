@@ -2,11 +2,6 @@ package mountains_in_france;
 
 import java.util.Comparator;
 
-/**
- * Created 6/10/16
- *
- * @author Niels Norberg
- */
 public class MountainRangeComparator implements Comparator<Mountain> {
     @Override
     public int compare(Mountain o1, Mountain o2) {

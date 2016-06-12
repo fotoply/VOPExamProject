@@ -3,11 +3,6 @@ package rock_scissors_paper;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Created 6/10/16
- *
- * @author Niels Norberg
- */
 public class RockScissorsPaper {
     public final static String[] HAND_TYPES = new String[]{"Sten", "Saks", "Papir"};
     private String playersHand;

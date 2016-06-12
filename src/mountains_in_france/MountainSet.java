@@ -7,11 +7,6 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- * Created 6/10/16
- *
- * @author Niels Norberg
- */
 public class MountainSet {
     private Set<Mountain> mountains;
 
