@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="view.MainWindowController">
+  <tabs>
+    <Tab text="Oldtids kryptering">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="originalTextField" layoutX="115.0" layoutY="61.0" prefHeight="26.0" prefWidth="471.0" promptText="Tekst som skal krypteres" />
+                  <Text layoutX="14.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Besked" />
+                  <RadioButton fx:id="atbashRadioButton" layoutX="115.0" layoutY="109.0" mnemonicParsing="false" selected="true" text="Atbash">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="encryptionToggleGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="caesarRadioButton" layoutX="360.0" layoutY="109.0" mnemonicParsing="false" text="Caesar" toggleGroup="$encryptionToggleGroup" />
+                  <Spinner fx:id="rotationFactorSpinner" layoutX="441.0" layoutY="105.0" prefHeight="22.0" prefWidth="145.0" />
+                  <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kryptering" />
+                  <Button fx:id="encryptButton" layoutX="15.0" layoutY="171.0" mnemonicParsing="false" onAction="#encryptionButtonClicked" text="Krypter" />
+                  <Button fx:id="decryptButton" layoutX="14.0" layoutY="234.0" mnemonicParsing="false" onAction="#encryptionButtonClicked" text="Dekrypter" />
+                  <TextField fx:id="encryptedTextField" layoutX="115.0" layoutY="171.0" prefHeight="26.0" prefWidth="467.0" promptText="Den krypterede tekst" />
+                  <TextField fx:id="decryptedTextField" layoutX="115.0" layoutY="234.0" prefHeight="26.0" prefWidth="467.0" promptText="Den dekrypterede tekst" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Sten-Saks-Papir">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="rockButton" layoutX="76.0" layoutY="37.0" mnemonicParsing="false" onAction="#rockPaperScissorsButtonClicked" text="Sten" />
+                  <Button fx:id="scissorsButton" layoutX="276.0" layoutY="37.0" mnemonicParsing="false" onAction="#rockPaperScissorsButtonClicked" text="Saks" />
+                  <Button fx:id="paperButton" layoutX="483.0" layoutY="37.0" mnemonicParsing="false" onAction="#rockPaperScissorsButtonClicked" text="Papir" />
+                  <Text layoutX="253.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vælg din hånd" />
+                  <Text layoutX="25.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computeres valg:" />
+                  <Text fx:id="computerChoiceText" layoutX="148.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <Text layoutX="58.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultat:" />
+                  <Text fx:id="resultsText" layoutX="123.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <ImageView fx:id="computerChoiceImage" fitHeight="108.0" fitWidth="144.0" layoutX="58.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="yourChoiceImage" fitHeight="108.0" fitWidth="144.0" layoutX="391.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text layoutX="391.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dit valg:" />
+                  <Text fx:id="yourChoiceText" layoutX="449.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
